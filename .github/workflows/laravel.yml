@@ -21,7 +21,7 @@ jobs:
       run:  |
         cd laravel-realworld-example-app
         composer self update
-        composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --prefer-source --no-interaction --dev
+        composer install -q --no-interaction -- --prefer-source -- --dev
         cp .env.example .env
     - name: Generate key
       run: php artisan key:generate

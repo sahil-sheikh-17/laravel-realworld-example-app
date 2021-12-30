@@ -19,7 +19,6 @@ jobs:
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
       run:  |
-        # cd laravel-realworld-example-app
         composer self update
         composer install -q --no-interaction -- --prefer-source -- --dev
         cp .env.example .env
